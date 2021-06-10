@@ -21,5 +21,15 @@ pipeline {
                 }
             }
         }
+        stage('Deliver') {
+            steps {
+                sh './jenkins/scripts/deliver.sh'
+            }
+            post {
+                always {
+                    echo 'peepeepoopoo'
+                }
+            }
+        }
     }
 }
